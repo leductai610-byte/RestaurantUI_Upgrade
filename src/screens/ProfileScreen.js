@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 import { 
   View, Text, StyleSheet, SafeAreaView, ScrollView, 
   TouchableOpacity, Image, Switch 
@@ -8,6 +9,9 @@ import { Ionicons } from '@expo/vector-icons';
 export default function ProfileScreen() {
   // Trạng thái cho nút bật/tắt Dark Mode
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // MỚI THÊM: Rút hàm logout từ trạm phát sóng ra
+  const { logout } = useContext(AuthContext);
 
   // Hàm tạo từng dòng Menu siêu gọn
   const renderMenuItem = (iconName, title, hasSwitch = false) => (
@@ -81,7 +85,8 @@ export default function ProfileScreen() {
         </View>
 
         {/* ================= NÚT LOGOUT ================= */}
-        <TouchableOpacity style={styles.logoutBtn}>
+        {/* MỚI THÊM: Gắn sự kiện onPress={logout} vào đây */}
+        <TouchableOpacity style={styles.logoutBtn} onPress={logout}>
           <Text style={styles.logoutText}>Log Out</Text>
           <Ionicons name="log-out-outline" size={20} color="#FFF" style={{ marginLeft: 8 }} />
         </TouchableOpacity>

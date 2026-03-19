@@ -1,20 +1,30 @@
-# Bài tập Thực hành 16/03/2026: Giao diện App Đặt Đồ Ăn (Restaurant UI)
+# Bài tập: Restaurant App - Phần 2 (Login & Tìm kiếm)
 
 ## 📌 Thông tin sinh viên
-* **Họ và tên:** Lê Đức Tài
-* **Mã số sinh viên:** 23810310296
-* **Lớp:** D18CNPM4
+* **Họ và tên:** Li
+* **Mã số sinh viên:** [Điền MSSV của bạn vào đây]
+* **Lớp:** [Điền tên lớp vào đây]
+* **Chuyên ngành:** Công nghệ Thông tin
+
+---
+
+## 🚀 Tính năng mới cập nhật (Phần 2)
+Dự án được nâng cấp từ Phần 1, bổ sung các chức năng xử lý logic và quản lý trạng thái:
+1. **Đăng nhập & Đăng xuất (Context API):** Sử dụng `AuthContext` để quản lý trạng thái toàn cục. Luồng điều hướng tự động chặn người dùng ở màn hình Login nếu chưa đăng nhập, và đá văng ra ngoài khi bấm Log Out ở trang Profile.
+2. **Tìm kiếm dữ liệu động:** Tính năng thanh tìm kiếm ở trang chủ, sử dụng JavaScript (`filter` & `includes`) để lọc món ăn trực tiếp khi người dùng gõ từ khóa.
+3. **Quản lý dữ liệu Local:** Chuyển đổi dữ liệu tĩnh thành mảng JSON được lưu trữ trong file `data.js`, giúp dễ dàng gọi và đổ dữ liệu (render) ra màn hình bằng hàm `map()`.
+
 ---
 
 ## 📱 Kết quả thực hiện (Screenshots)
 
-Dự án hoàn thiện 3 màn hình chính sử dụng React Native, Expo và Bottom Tab Navigation để chuyển trang.
+### 1. Màn hình Login (Giao diện mới)
+![Login Screen](./login.jpg)
 
-### 1. Màn hình Home (Trang chủ)
+### 2. Màn hình Home (Đổ dữ liệu & Tìm kiếm)
 ![Home Screen](./home.jpg)
 
-### 2. Màn hình Cart (Giỏ hàng / Order)
-![Cart Screen](./cart.jpg)
-
-### 3. Màn hình Profile (Trang cá nhân)
+### 3. Màn hình Profile (Có chức năng Log Out)
 ![Profile Screen](./profile.jpg)
+
+
